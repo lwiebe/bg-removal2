@@ -1,4 +1,4 @@
-import { Webhook } from "svix"
+import {Webhook} from "svix"
 import userModel from '../models/userModel.js'
 
 // API Controller Function to Manage Clerk User with database
@@ -23,8 +23,8 @@ const clerkWebhooks = async (req,res) => {
 
                 const userData = {
                     clerkId: data.id,
-                    email:data.email_addresses[0].email_address,
-                    firstName:data.first_name,
+                    email: data.email_addresses[0].email_address,
+                    firstName: data.first_name,
                     lastName: data.last_name,
                     photo: data.image_url
                 }
